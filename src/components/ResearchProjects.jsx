@@ -1,4 +1,5 @@
-import { Satellite, FlaskConical } from "lucide-react";
+import { Satellite, FlaskConical, ExternalLink } from "lucide-react";
+import { GithubGlyph } from "./icons";
 import { researchProjects, academicProjects } from "../data/content";
 
 export default function ResearchProjects() {
@@ -24,6 +25,32 @@ export default function ResearchProjects() {
                 {r.role} · {r.period}
               </p>
               <p className="text-sm leading-relaxed text-ink-500 dark:text-ink-400">{r.description}</p>
+              {(r.github || r.website) && (
+                <div className="mt-auto flex flex-wrap items-center gap-2 pt-2">
+                  {r.github && (
+                    <a
+                      href={r.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 px-3 py-1.5 text-xs font-medium text-ink-700 transition-colors hover:border-accent-400 hover:text-accent-600 dark:border-ink-700 dark:text-ink-200 dark:hover:border-accent-500 dark:hover:text-accent-400"
+                    >
+                      <GithubGlyph size={13} />
+                      GitHub
+                    </a>
+                  )}
+                  {r.website && (
+                    <a
+                      href={r.website}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-accent-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-accent-700"
+                    >
+                      Website
+                      <ExternalLink size={12} />
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

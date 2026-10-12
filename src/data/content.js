@@ -131,6 +131,8 @@ export const researchProjects = [
     role: "Research Lead",
     period: "May 2025 – Present",
     description: "Processing Sentinel-1 and ALOS-2 archives with PS-InSAR and SBAS to map subsidence and uplift for 2015–2025, with GNSS validation.",
+    github: "https://github.com/TowhidulIslam27/bGMO",
+    website: "https://bmgo.sarsense.com/#bangladesh",
   },
 ];
 
