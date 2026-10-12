@@ -132,7 +132,7 @@ export const researchProjects = [
     period: "May 2025 – Present",
     description: "Processing the Sentinel-1 archive with PS-InSAR and SBAS to map subsidence and uplift for 2016–2024, deriving LOS velocity and decomposed vertical and east–west motion, with GNSS validation. Six major cities are complete; other regions are in progress.",
     github: "https://github.com/TowhidulIslam27/bGMO",
-    website: "https://bmgo.sarsense.com/#bangladesh",
+    website: "https://bgmo.sarsense.com/#bangladesh",
   },
 ];
 
