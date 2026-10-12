@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, "SF Mono", monospace;
+
+  /* professional blue accent */
+  --color-accent-50: #eff6ff;
+  --color-accent-100: #dbeafe;
+  --color-accent-200: #bfdbfe;
+  --color-accent-300: #93c5fd;
+  --color-accent-400: #60a5fa;
+  --color-accent-500: #3b82f6;
+  --color-accent-600: #2563eb;
+  --color-accent-700: #1d4ed8;
+  --color-accent-800: #1e40af;
+  --color-accent-900: #1e3a8a;
+
+  /* blue-tinted neutrals (slate) so the whole page reads as one cohesive blue system */
+  --color-ink-50: #f8fafc;
+  --color-ink-100: #f1f5f9;
+  --color-ink-200: #e2e8f0;
+  --color-ink-300: #cbd5e1;
+  --color-ink-400: #94a3b8;
+  --color-ink-500: #64748b;
+  --color-ink-600: #475569;
+  --color-ink-700: #334155;
+  --color-ink-800: #1e293b;
+  --color-ink-900: #0f172a;
+  --color-ink-950: #020617;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  @apply bg-white text-ink-600 antialiased dark:bg-ink-950 dark:text-ink-300;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply text-ink-900 dark:text-white;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  @apply bg-accent-200 text-accent-900 dark:bg-accent-800 dark:text-accent-50;
+}
+
+/* offset scroll targets under the sticky navbar */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+.container-px {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+}
