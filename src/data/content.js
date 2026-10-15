@@ -12,7 +12,7 @@ const asset = (path) =>
 
 export const profile = {
   name: "Towhidul Islam",
-  role: "Geospatial Researcher · InSAR & Climate Hazards",
+  role: "Founder and Director, SAR.Sense Geointelligence Lab · InSAR & Climate Hazards",
   tagline:
     "I study how land subsidence, landslides and flooding combine into risk in data-scarce deltas like Bangladesh — using SAR/InSAR, explainable AI and the tools I build to make that research reproducible.",
   location: "Chittagong, Bangladesh",
@@ -25,7 +25,7 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I am a geospatial researcher working on ground deformation and climate hazards. As founder and research lead of SAR.Sense Geointelligence Lab in Chittagong, I lead three projects that use PS-InSAR, SBAS and explainable machine learning to map where the ground is moving across Bangladesh, why, and how it compounds flood risk in cities.",
+    "I am a geospatial researcher working on ground deformation and climate hazards. As Founder and Director of SAR.Sense Geointelligence Lab in Chittagong, I lead three projects that use PS-InSAR, SBAS and explainable machine learning to map where the ground is moving across Bangladesh, why, and how it compounds flood risk in cities.",
     "I trained in Earth observation at ITC (University of Twente), urban management at IHS (Erasmus University Rotterdam), and geography at the University of Chittagong. My ITC research measured a slow-moving landslide with multi-sensor PSInSAR in a data-sparse region, and I have since deepened my InSAR time-series and deformation-modelling skills at the COMET InSAR Training Workshop (2025). My Erasmus thesis studied how pluvial flooding disrupts travel in Chittagong. Both questions now meet in my current work.",
     "When research is slowed by data sourcing or fragmented pipelines, I build the tools to fix it — which is how BanGIS Pro started. I am now looking for a funded PhD to take this work further.",
   ],
@@ -158,7 +158,7 @@ export const academicProjects = [
 export const experience = [
   {
     org: "SAR.Sense Geointelligence Lab",
-    role: "Founder & Research Lead",
+    role: "Founder and Director",
     location: "Chittagong, Bangladesh",
     period: "May 2025 – Present",
     bullets: [
