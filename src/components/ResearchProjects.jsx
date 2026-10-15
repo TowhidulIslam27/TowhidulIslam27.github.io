@@ -1,4 +1,4 @@
-import { Satellite, FlaskConical, ExternalLink } from "lucide-react";
+import { Satellite, FlaskConical, ExternalLink, FileText } from "lucide-react";
 import { GithubGlyph } from "./icons";
 import { researchProjects, academicProjects } from "../data/content";
 
@@ -25,7 +25,7 @@ export default function ResearchProjects() {
                 {r.role} · {r.period}
               </p>
               <p className="text-sm leading-relaxed text-ink-500 dark:text-ink-400">{r.description}</p>
-              {(r.github || r.website) && (
+              {(r.github || r.website || r.paper) && (
                 <div className="mt-auto flex flex-wrap items-center gap-2 pt-2">
                   {r.github && (
                     <a
@@ -36,6 +36,18 @@ export default function ResearchProjects() {
                     >
                       <GithubGlyph size={13} />
                       GitHub
+                    </a>
+                  )}
+                  {r.paper && (
+                    <a
+                      href={r.paper}
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Manuscript in preparation"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 px-3 py-1.5 text-xs font-medium text-ink-700 transition-colors hover:border-accent-400 hover:text-accent-600 dark:border-ink-700 dark:text-ink-200 dark:hover:border-accent-500 dark:hover:text-accent-400"
+                    >
+                      <FileText size={13} />
+                      Paper
                     </a>
                   )}
                   {r.website && (
