@@ -124,7 +124,8 @@ export const researchProjects = [
     name: "Deformation Susceptibility with InSAR & XAI",
     role: "Research Lead",
     period: "Sept. 2025 – Present",
-    description: "Building explainable models (SHAP / LIME) that link InSAR deformation to geological and human drivers, so planners see where the ground is moving and why.",
+    description: "Explainable models that link PS-InSAR subsidence in Dhaka and Chattogram to geology, terrain and urban drivers, and test whether those drivers transfer between the two cities. 60+ factors on a 100 m grid, spatially cross-validated models (R² 0.50 Dhaka, 0.64 Chattogram); SHAP and the transfer test are next.",
+    github: "https://github.com/TowhidulIslam27/xai-urban-subsidence-bd",
   },
   {
     name: "Nationwide Land Deformation Map of Bangladesh",
