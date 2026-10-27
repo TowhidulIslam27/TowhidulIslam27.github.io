@@ -73,7 +73,7 @@ export const softwareProjects = [
     org: "Begun independently · SAR.Sense Geointelligence Lab since 2025",
     period: "May 2024 – Present",
     description:
-      "A desktop GIS for SAR and geospatial research, with Hiron, a native AI agent that plans and runs multi-step workflows from plain-language instructions.",
+      "A one-stop desktop platform for geospatial researchers. It brings together Google Earth Engine, Python scripting, open data access, agentic AI and layout scripting, and attaches an academic reference to the result of every process.",
     facts: [
       { value: "312", label: "geospatial tools released, more in the pipeline" },
       { value: "27", label: "specialised domain toolboxes" },
@@ -81,11 +81,13 @@ export const softwareProjects = [
       { value: "271", label: "documented methods" },
     ],
     highlights: [
+      { title: "One platform for the whole workflow", text: "Google Earth Engine, Python scripting, open data access, an AI agent and layout scripting in a single desktop application, so a study does not have to be stitched together across separate tools." },
+      { title: "Google Earth Engine and open data", text: "Earth Engine, OSM, STAC, PostGIS and more are fetched and clipped to your study area automatically, so analysis starts from the data rather than from downloading it." },
+      { title: "Python scripting, integrated", text: "An integrated Python console lets you script any step and mix code with the no-code interface." },
+      { title: "Layout scripting with Python", text: "Build and repeat map layouts from scripts, so figures can be regenerated exactly when data or parameters change." },
+      { title: "Hiron — agentic AI", text: "A native agent that plans and runs multi-step GIS and SAR workflows from plain-language instructions." },
+      { title: "A reference after every process", text: "Every tool exports a report that cites the published method behind it, so each result comes with its academic reference." },
       { title: "SAR/InSAR from first principles", text: "Radiometric calibration, speckle filtering, Range-Doppler terrain correction and full InSAR, PolSAR and TomoSAR workflows." },
-      { title: "Reproducible by design", text: "Every tool exports a report citing the published method behind it." },
-      { title: "Hiron — a native AI agent", text: "Plans and runs multi-step GIS and SAR workflows from plain-language instructions." },
-      { title: "Automatic data access", text: "Earth Engine, OSM, STAC, PostGIS and more — fetched and clipped to the study area." },
-      { title: "Built for researchers who code", text: "Integrated Python console and scriptable layouts alongside the no-code interface." },
       { title: "SAR Studio — in the pipeline", text: "A dedicated SAR environment is in development for BanGIS Pro. It is not ready yet and is not part of the current release." },
     ],
     stack: [
