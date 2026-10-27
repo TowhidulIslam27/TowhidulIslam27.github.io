@@ -143,7 +143,7 @@ export const researchProjects = [
 
 export const academicProjects = [
   {
-    name: "Slow-moving Landslide Deformation",
+    name: "Slow-moving Landslide Deformation (Research at ITC)",
     period: "Sep. 2023 – Apr. 2024",
     description: "Multi-sensor PSInSAR (Envisat, Sentinel-1) with geomorphological mapping in a data-sparse region; showed Sentinel-1 resolves finer deformation than Envisat.",
   },
