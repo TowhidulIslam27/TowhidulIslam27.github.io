@@ -87,7 +87,6 @@ export const softwareProjects = [
       { title: "Layout scripting with Python", text: "Build and repeat map layouts from scripts, so figures can be regenerated exactly when data or parameters change." },
       { title: "Hiron — agentic AI", text: "A native agent that plans and runs multi-step GIS and SAR workflows from plain-language instructions." },
       { title: "A reference after every process", text: "Every tool exports a report that cites the published method behind it, so each result comes with its academic reference." },
-      { title: "SAR/InSAR from first principles", text: "Radiometric calibration, speckle filtering, Range-Doppler terrain correction and full InSAR, PolSAR and TomoSAR workflows." },
       { title: "SAR Studio — in the pipeline", text: "A dedicated SAR environment is in development for BanGIS Pro. It is not ready yet and is not part of the current release." },
     ],
     stack: [
