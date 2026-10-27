@@ -86,6 +86,7 @@ export const softwareProjects = [
       { title: "Hiron — a native AI agent", text: "Plans and runs multi-step GIS and SAR workflows from plain-language instructions." },
       { title: "Automatic data access", text: "Earth Engine, OSM, STAC, PostGIS and more — fetched and clipped to the study area." },
       { title: "Built for researchers who code", text: "Integrated Python console and scriptable layouts alongside the no-code interface." },
+      { title: "SAR Studio — in the pipeline", text: "A dedicated SAR environment is in development for BanGIS Pro. It is not ready yet and is not part of the current release." },
     ],
     stack: [
       "FastAPI",
