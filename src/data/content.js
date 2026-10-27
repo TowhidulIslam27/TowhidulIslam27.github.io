@@ -120,21 +120,93 @@ export const researchProjects = [
     name: "Integrated Landslide Early Warning System",
     role: "Research Lead",
     period: "Jul. 2026 – Present",
-    description: "Daily landslide early warning for Rangamati, the Rohingya camps (Ukhia/Teknaf) and Chattogram city hills, combining susceptibility, rainfall thresholds and InSAR slope deformation. Compiled an inventory of 3,400+ records from published catalogues and press reports; first terrain-only random forest, validated on held-out spatial blocks (AUC 0.78 city, 0.73 camps, 0.62 Rangamati). Rainfall thresholds, InSAR and the alert hindcast are next.",
+    description:
+      "Daily landslide early warning for Rangamati, the Rohingya camps (Ukhia/Teknaf) and Chattogram city hills, combining susceptibility, rainfall thresholds and InSAR slope deformation. So far: a landslide inventory of about 3,400 records from published catalogues, agency data and press reports, and a first terrain-only susceptibility baseline. Rainfall thresholds, InSAR slope deformation and a 2017–2026 alert hindcast are next.",
+    facts: [
+      { value: "3,400+", label: "landslide records in the inventory" },
+      { value: "604", label: "well-located points used in the baseline (160 · 292 · 152)" },
+      { value: "0.78", label: "AUC on held-out spatial blocks in the city hills (slope alone 0.72)" },
+      { value: "54%", label: "of city-hill landslides fall in the top-scoring fifth of the area" },
+    ],
+    findings: [
+      "On held-out spatial blocks the terrain-only model beats slope alone in the city hills (AUC 0.78 vs 0.72) and the camps (0.73 vs 0.49), but not in Rangamati (0.62 vs 0.64).",
+      "A model trained on two sites does not transfer to the third (AUC 0.51–0.67, no better than slope alone), so each new site needs its own inventory.",
+    ],
+    note: "A baseline to beat, not a hazard map: the Rangamati points all lie along one road, and the camp points come from a single mapping study.",
+    figures: [
+      {
+        src: asset("/images/research/ilews-susceptibility-maps.png"),
+        alt: "Terrain-only landslide susceptibility maps for Rangamati and the road corridor, the Rohingya camps and the Chattogram city hills, with mapped landslide points.",
+        caption: "Terrain-only random forest susceptibility at the three pilot sites, with the mapped landslides used (n = 160, 292, 152).",
+      },
+      {
+        src: asset("/images/research/ilews-model-performance.png"),
+        alt: "Held-out AUC compared with slope-only and logistic baselines, out-of-fold prediction-rate curves, and transfer to an unseen site.",
+        caption: "Held-out AUC against slope-only and logistic baselines, out-of-fold prediction-rate curves, and transfer to an unseen site.",
+      },
+    ],
     github: "https://github.com/TowhidulIslam27/ILEWS",
   },
   {
     name: "Deformation Susceptibility with InSAR & XAI",
     role: "Research Lead",
     period: "Sept. 2025 – Present",
-    description: "Explainable models that link PS-InSAR subsidence in Dhaka and Chattogram to geology, terrain and urban drivers, and test whether those drivers transfer between the two cities. 60+ factors on a 100 m grid, spatially cross-validated models (R² 0.50 Dhaka, 0.64 Chattogram); SHAP / LIME analysis and the transfer test are next.",
+    description:
+      "Explainable models that link PS-InSAR subsidence in Dhaka and Chattogram to geology, terrain and urban drivers, and test whether those drivers transfer between the two cities. About 64 candidate factors per city on a 100 m grid were screened down to 52 (Dhaka) and 45 (Chattogram), 40 of them shared for the transfer test, and added in groups under spatial block cross-validation. SHAP / LIME analysis and the transfer test are next.",
+    facts: [
+      { value: "~64", label: "candidate factors per city, screened to 52 (Dhaka) and 45 (Chattogram)" },
+      { value: "17,622 · 5,142", label: "PS cells with a velocity value, Dhaka · Chattogram (100 m grid)" },
+      { value: "0.50 · 0.64", label: "cross-validated R² with all factor groups (2 km blocks), Dhaka · Chattogram" },
+      { value: "0.61 · 0.74", label: "R² of a model that only knows cell coordinates, the baseline to beat" },
+    ],
+    findings: [
+      "Skill rises as factor groups are added. Dhaka R² goes 0.11 → 0.22 → 0.46 → 0.50 (terrain, then geology, then urban load and land cover, then fill history and groundwater proxies); Chattogram goes 0.38 → 0.44 → 0.64 → 0.64.",
+      "The two cities behave differently: terrain alone explains a good part of the pattern in Chattogram but almost nothing in Dhaka, where urban load, land cover and fill history carry the skill.",
+      "A coordinates-only model still beats all the factors together, so part of the subsidence follows a broad spatial signal the factors miss. Groundwater heads for Dhaka are the next model.",
+    ],
+    figures: [
+      {
+        src: asset("/images/research/xai-cv-skill.jpg"),
+        alt: "Cross-validated R² of vertical velocity for each factor set in Dhaka and Chattogram, with gradient-boosted trees, random forest and linear models and a coordinates-only reference line.",
+        caption: "Cross-validated R² of vertical velocity by factor set (mean and s.d. over 10 repeats); the dashed line is a coordinates-only model. Manuscript in preparation.",
+      },
+      {
+        src: asset("/images/research/xai-factor-maps.jpg"),
+        alt: "Maps of six explanatory factors, Dhaka beside Chattogram: elevation, height above nearest drainage, distance to the Holocene contact, pond and ditch share, land under development, and road density.",
+        caption: "Six of the explanatory factors, Dhaka next to Chattogram. Manuscript in preparation.",
+      },
+    ],
     github: "https://github.com/TowhidulIslam27/xai-urban-subsidence-bd",
   },
   {
     name: "Nationwide Land Deformation Map of Bangladesh",
     role: "Research Lead",
     period: "May 2025 – Present",
-    description: "Processing the Sentinel-1 archive with PS-InSAR and SBAS to map subsidence and uplift for 2016–2024, deriving LOS velocity and decomposed vertical and east–west motion, with GNSS validation. Six major cities are complete; other regions are in progress.",
+    description:
+      "Processing the Sentinel-1 archive with PS-InSAR and SBAS to map subsidence and uplift for 2016–2024, deriving LOS velocity per persistent scatterer and decomposed vertical and east–west motion on a 100 m grid. Six cities are processed so far (Dhaka, Chattogram, Khulna, Barishal, Sylhet, Cumilla); other regions are in progress. A manuscript on the three largest cities is in preparation.",
+    facts: [
+      { value: "~275,000", label: "persistent scatterers across the six processed cities" },
+      { value: "12", label: "Sentinel-1 stacks, one ascending and one descending per city" },
+      { value: "~29,000", label: "100 m cells with decomposed vertical and east–west motion" },
+      { value: "5", label: "continuous GNSS stations used for validation in the paper" },
+    ],
+    findings: [
+      "Ground motion follows geology: in Dhaka the marsh clay and peat unit has the lowest median vertical velocity, and in Chattogram 20–33% of cells on valley alluvium, beach and dune sand and channel deposits subside faster than 5 mm/yr (depending on unit and time window).",
+      "Building footprint density is only weakly related to vertical velocity (Spearman ρ ≈ −0.2 in all three cities), so urban load alone does not explain where the ground moves.",
+    ],
+    note: "Rates are relative to a local reference area and are not yet tied to GNSS; calibration against continuous GNSS stations is part of the manuscript.",
+    figures: [
+      {
+        src: asset("/images/research/bgmo-study-area.jpg"),
+        alt: "Map of Bangladesh with the Sentinel-1 frames used, and persistent scatterer density per 100 m cell in Dhaka, Khulna and Chattogram.",
+        caption: "Sentinel-1 frames and persistent-scatterer density per 100 m cell in Dhaka, Khulna and Chattogram (about 220,000 scatterers). Manuscript preview.",
+      },
+      {
+        src: asset("/images/research/bgmo-geology-load.jpg"),
+        alt: "Geology maps with subsiding cells, vertical velocity by geological unit, and median velocity against building density and height for Dhaka, Chattogram and Khulna.",
+        caption: "Surface geology with fast-subsiding cells, vertical velocity by geological unit, and its relation to building density and height. Manuscript preview.",
+      },
+    ],
     github: "https://github.com/TowhidulIslam27/bGMO",
     website: "https://bgmo.sarsense.com/#bangladesh",
     paper: "https://github.com/TowhidulIslam27/bGMO/tree/main/docs/paper",
