@@ -25,7 +25,7 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I am a geospatial researcher working on ground deformation and climate hazards. As Founder and Director of SAR.Sense Geointelligence Lab in Chittagong, I lead three projects that use PS-InSAR, SBAS and explainable machine learning to map where the ground is moving across Bangladesh, why, and how it compounds flood risk in cities.",
+    "I am a geospatial researcher working on ground deformation and climate hazards. As Founder and Director of SAR.Sense Geointelligence Lab in Chittagong, I lead three projects that use PS-InSAR, SBAS and explainable machine learning to map where the ground is moving across Bangladesh, why, and how subsidence, landslides and flooding combine into hazard risk.",
     "I trained in Earth observation at ITC (University of Twente), urban management at IHS (Erasmus University Rotterdam), and geography at the University of Chittagong. My ITC research measured a slow-moving landslide with multi-sensor PSInSAR in a data-sparse region, and I have since deepened my InSAR time-series and deformation-modelling skills at the COMET InSAR Training Workshop (2025). My Erasmus thesis studied how pluvial flooding disrupts travel in Chittagong. Both questions now meet in my current work.",
     "When research is slowed by data sourcing or fragmented pipelines, I build the tools to fix it — which is how BanGIS Pro started. I am now looking for a funded PhD to take this work further.",
   ],
@@ -43,9 +43,9 @@ export const researchInterests = {
     },
     {
       icon: "waves",
-      title: "Compound risk in deltaic cities",
-      text: "How subsidence changes exposure to pluvial flooding and heat, and how households adapt — coupling InSAR with agent-based models.",
-      tags: ["Pluvial flooding", "Compound risk", "Agent-based models"],
+      title: "Multi-hazard risk in deltaic regions",
+      text: "How subsidence, landslides and monsoon rainfall overlap in the same places, and how InSAR slope deformation can feed early warning where ground data are scarce.",
+      tags: ["Landslide early warning", "Multi-hazard risk", "Pluvial flooding"],
     },
     {
       icon: "brain",
@@ -55,13 +55,13 @@ export const researchInterests = {
     },
   ],
   questions: [
-    "How much does land subsidence increase pluvial flood exposure in fast-growing deltaic cities, and where?",
+    "Where do subsidence, landslides and flooding overlap in Bangladesh, and how much does that overlap raise risk for the people living there?",
     "Which geological and human drivers best explain observed deformation — and can explainable models show planners where to act first?",
     "How can InSAR-based risk products be validated and made reliable where ground data are scarce?",
   ],
   cta: {
     title: "Open to funded PhD positions",
-    text: "I am looking for a funded PhD in geohazards, climate risk or Earth observation, ideally on InSAR-based deformation and compound flood risk. I am ready to commit to it full-time.",
+    text: "I am looking for a funded PhD in geohazards, climate vulnerability or Earth observation, ideally on InSAR-based deformation and multi-hazard risk assessment. I am ready to commit to it full-time.",
   },
 };
 
@@ -115,16 +115,17 @@ export const softwareProjects = [
 
 export const researchProjects = [
   {
-    name: "InSAR–ABM Compound-Risk Framework for Chittagong",
+    name: "Integrated Landslide Early Warning System",
     role: "Research Lead",
-    period: "Nov. 2025 – Present",
-    description: "Coupling InSAR, flood data and an agent-based model of households to test how drainage upgrades and groundwater management change flood–subsidence risk.",
+    period: "Jul. 2026 – Present",
+    description: "Daily landslide early warning for Rangamati, the Rohingya camps (Ukhia/Teknaf) and Chattogram city hills, combining susceptibility, rainfall thresholds and InSAR slope deformation. Compiled an inventory of 3,400+ records from published catalogues and press reports; first terrain-only random forest, validated on held-out spatial blocks (AUC 0.78 city, 0.73 camps, 0.62 Rangamati). Rainfall thresholds, InSAR and the alert hindcast are next.",
+    github: "https://github.com/TowhidulIslam27/ILEWS",
   },
   {
     name: "Deformation Susceptibility with InSAR & XAI",
     role: "Research Lead",
     period: "Sept. 2025 – Present",
-    description: "Explainable models that link PS-InSAR subsidence in Dhaka and Chattogram to geology, terrain and urban drivers, and test whether those drivers transfer between the two cities. 60+ factors on a 100 m grid, spatially cross-validated models (R² 0.50 Dhaka, 0.64 Chattogram); SHAP and the transfer test are next.",
+    description: "Explainable models that link PS-InSAR subsidence in Dhaka and Chattogram to geology, terrain and urban drivers, and test whether those drivers transfer between the two cities. 60+ factors on a 100 m grid, spatially cross-validated models (R² 0.50 Dhaka, 0.64 Chattogram); SHAP / LIME analysis and the transfer test are next.",
     github: "https://github.com/TowhidulIslam27/xai-urban-subsidence-bd",
   },
   {
@@ -163,8 +164,9 @@ export const experience = [
     location: "Chittagong, Bangladesh",
     period: "May 2025 – Present",
     bullets: [
-      "Lead three InSAR and explainable-AI research projects on deformation and compound flood risk.",
+      "Lead three InSAR and explainable-AI research projects on ground deformation and hazard risk.",
       "Coordinate a research team of 20+ members and 5 external collaborators across three units: hazards, agriculture & forestry, and water & environment.",
+      "Co-supervise 3 senior theses from the Environmental Science Department of Asian University for Women (AUW), under a Memorandum of Agreement between the department and SAR.Sense (2026).",
       "Built BanGIS Pro, the lab's research GIS platform; teach remote sensing and geospatial AI through SAR.Sense Academy.",
     ],
   },
@@ -240,11 +242,11 @@ export const education = [
     degree: "PgD, Geo-Information Science and Earth Observation — specialisation in Natural Hazards and Disaster Risk Reduction",
     period: "Aug. 2021 – Apr. 2024",
     location: "Enschede, The Netherlands",
-    note: "Research: Assessing Spatiotemporal Deformation Pattern of a Slow-Moving Landslide in a Data-Sparse Region",
+    note: "Research: Assessing Spatiotemporal Deformation Pattern of a Slow-Moving Landslide in a Data-Sparse Region. Extended programme; completed with a full independent InSAR research project (final assignment, 7.0). Relevant coursework: Data-driven Hazard Modelling (8.0), Radar Remote Sensing (7.5).",
   },
   {
     school: "Erasmus University Rotterdam",
-    degree: "MSc, Urban Management and Development",
+    degree: "MSc, Urban Management and Development — specialisation in Urban Environment, Sustainability and Climate Change",
     period: "Sept. 2019 – Jan. 2021",
     location: "Rotterdam, The Netherlands",
     note: "Research: Effects of Pluvial Urban Flood on Intracity Travel Behavior: The Case of Chittagong City, Bangladesh",
@@ -292,8 +294,22 @@ export const languages = [
   { name: "English", detail: "IELTS Academic 7.0 overall, CEFR C1 (L 7.0, R 7.5, W 6.5, S 7.0) — Aug. 2026" },
 ];
 
-// group: "main" = hazards & climate-risk work, listed first; "other" = listed under "Other contributions".
+// group: "prep" = lead-author manuscripts in preparation; "main" = hazards & climate-risk work; "other" = listed under "Other contributions".
 export const publications = [
+  {
+    citation:
+      "Islam, T., et al. (in preparation). Ground motion and infrastructure exposure in Bangladesh's three largest cities from multi-geometry PS-InSAR.",
+    href: "https://github.com/TowhidulIslam27/bGMO/tree/main/docs/paper",
+    tag: "In preparation",
+    group: "prep",
+  },
+  {
+    citation:
+      "Islam, T., et al. (in preparation). Do the drivers of urban subsidence transfer between cities? An InSAR-XAI look into Dhaka and Chattogram City of Bangladesh.",
+    href: "https://github.com/TowhidulIslam27/xai-urban-subsidence-bd",
+    tag: "In preparation",
+    group: "prep",
+  },
   {
     citation:
       "Uddin, M.S., Mahmud, K., Islam, T., & Rahman, M.A. (2026). Explainable machine learning assessment of hydroclimatic and land-surface controls on agricultural drought in North-Western Bangladesh. Journal of Hydrology.",

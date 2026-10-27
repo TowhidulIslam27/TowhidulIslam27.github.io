@@ -2,6 +2,7 @@ import { ExternalLink } from "lucide-react";
 import { publications } from "../data/content";
 
 const GROUPS = [
+  { key: "prep", title: "Manuscripts in preparation (lead author)" },
   { key: "main", title: "Hazards & climate risk" },
   { key: "other", title: "Other contributions" },
 ];
