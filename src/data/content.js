@@ -244,7 +244,7 @@ export const education = [
     degree: "PgD, Geo-Information Science and Earth Observation — specialisation in Natural Hazards and Disaster Risk Reduction",
     period: "Aug. 2021 – Apr. 2024",
     location: "Enschede, The Netherlands",
-    note: "Research: Assessing Spatiotemporal Deformation Pattern of a Slow-Moving Landslide in a Data-Sparse Region. Extended programme; completed with a full independent InSAR research project (final assignment, 7.0). Relevant coursework: Data-driven Hazard Modelling (8.0), Radar Remote Sensing (7.5).",
+    note: "Research: Assessing Spatiotemporal Deformation Pattern of a Slow-Moving Landslide in a Data-Sparse Region. Extended programme; completed with a full independent InSAR research project. Relevant coursework: Data-driven Hazard Modelling, Radar Remote Sensing.",
   },
   {
     school: "Erasmus University Rotterdam",
