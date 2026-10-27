@@ -163,24 +163,33 @@ function ProjectCard({ r, index, onOpenFigure }) {
           )}
 
           {r.figures?.length > 0 && (
-            <div className={`grid items-start gap-6 ${r.stackFigures ? "" : "lg:grid-cols-2"}`}>
-              {r.figures.map((f) => (
-                <figure key={f.src} className="flex flex-col gap-2">
-                  <button
-                    type="button"
-                    onClick={() => onOpenFigure(f)}
-                    aria-label={`Enlarge figure: ${f.title}`}
-                    title="Click to enlarge"
-                    className="block cursor-zoom-in overflow-hidden rounded-xl border border-ink-200 bg-white p-2 text-left dark:border-ink-700"
-                  >
-                    <Watermarked>
-                      <img src={f.src} alt={f.alt} loading="lazy" className="block h-auto w-full" />
-                    </Watermarked>
-                  </button>
-                  <figcaption className="text-xs leading-relaxed text-ink-500 dark:text-ink-400">
-                    <span className="font-semibold text-ink-700 dark:text-ink-200">{f.title}.</span> {f.caption}
-                  </figcaption>
-                </figure>
+            <div
+              className={`grid items-start gap-6 ${r.stackFigures ? "" : "lg:grid-cols-2"}`}
+            >
+              {(r.figures.length === 3
+                ? [[r.figures[0], r.figures[2]], [r.figures[1]]]
+                : r.figures.map((f) => [f])
+              ).map((group) => (
+                <div key={group[0].src} className="flex flex-col gap-6">
+                  {group.map((f) => (
+                    <figure key={f.src} className="flex flex-col gap-2">
+                      <button
+                        type="button"
+                        onClick={() => onOpenFigure(f)}
+                        aria-label={`Enlarge figure: ${f.title}`}
+                        title="Click to enlarge"
+                        className="block cursor-zoom-in overflow-hidden rounded-xl border border-ink-200 bg-white p-2 text-left dark:border-ink-700"
+                      >
+                        <Watermarked>
+                          <img src={f.src} alt={f.alt} loading="lazy" className="block h-auto w-full" />
+                        </Watermarked>
+                      </button>
+                      <figcaption className="text-xs leading-relaxed text-ink-500 dark:text-ink-400">
+                        <span className="font-semibold text-ink-700 dark:text-ink-200">{f.title}.</span> {f.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
               ))}
             </div>
           )}
